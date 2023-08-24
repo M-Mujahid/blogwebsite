@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Edit Profile</title>
+    <!-- ======>>>>> Favicon Link -->
+    <link rel="icon" href="../Assets/favicon-32x32.png" sizes="" type="image/png">
+    <!-- ======>>>>> Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- ======>>>>> font-awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ======>>>>> My style.css Link -->
+    <link rel="stylesheet" href="editProfile.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navBlog">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand text-light fw-bold fs-5"" href=" #">Personal Blogging App</a>
+            <a class="nav-link fw-bold mt-1" aria-current="page" href="../signUp/signup.html" id="logoutBtn">Logout</a>
+        </div>
+    </nav>
+
+    <header class="py-3 border-bottom bg-white sizing">
+        <h2 class="fw-bold ">Profile</h2>
+    </header>
+
+    <section class="sizing mt-4">
+        <div class="border p-4 mt-2 mb-3 editProfileBgColor" style="border-radius: 10px">
+            <img src="../Assets/dummy-image.jpg" alt="" class="rounded me-3 editProfileImg mb-3"
+                style="width: 250px; height: 250px" id="profilePic">
+            <input type="file" accept="image/*" name="photo" id="updateImagefile" style="display: none" onchange="document.getElementById('profilePic').src = window.URL.createObjectURL(this.files[0])">
+            <label for="updateImagefile">
+                <i class="fa-solid fa-pen appColor fs-4 badgePosition"></i>
+            </label>
+
+            <div class="editFullName d-flex  flex-column gap-3">
+                <input type="text" class="form-control" id="editFirstName" placeholder="First name" autocomplete="off">
+                <input type="text" class="form-control" id="editSurName" placeholder="Surname" autocomplete="off">
+                <input type="password" class="form-control" id="oldPassword" size="25" placeholder="Old Password"
+                    autocomplete="off">
+                <input type="password" class="form-control" id="newPassword" size="25" placeholder="New Password"
+                    autocomplete="off">
+                <input type="password" class="form-control" id="confirmPassword" size="25"
+                    placeholder="Confirm Password" autocomplete="off">
+                <button type="button" class="btn updateProfileBtn mt-2 fw-medium w-50 align-self-start">Update
+                    Profile</button>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+    <!-- ======>>>>> Bootstrap JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <!-- ======>>>>> Moment JS Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+        integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ======>>>>> SweetAlert2 Link -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ======>>>>> My app.js Link -->
+    <script type="module" src="editProfile.js"></script>
+</body>
+
+</html>
